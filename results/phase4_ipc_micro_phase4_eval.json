@@ -1,0 +1,19 @@
+{
+  "payload_bytes": 315,
+  "n_msgs": 1000,
+  "reps": 3,
+  "transports": {
+    "conventional_socket": {
+      "publish_us_mean": 7.45,
+      "consume_us_mean": 8.92,
+      "total_ms_mean": 9.117,
+      "throughput_mb_s": 32.95
+    },
+    "vectlink_ring": {
+      "publish_us_mean": 4.67,
+      "consume_us_mean": 5.42,
+      "total_ms_mean": 10.268,
+      "throughput_mb_s": 29.26
+    }
+  }
+}

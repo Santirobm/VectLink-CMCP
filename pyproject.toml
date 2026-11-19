@@ -1,0 +1,11 @@
+[project]
+name = "vectlink-cmcp"
+version = "0.1.0"
+description = "Experimental two-level shared memory architecture combining CMCP semantic state and Vect-Link SHM/CoW inference memory"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,542 @@
+{
+  "config": {
+    "split": "eval",
+    "num_scenarios": 50,
+    "reps": 3,
+    "max_tokens": 64,
+    "model_b_name": "Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+    "dataset_sha256": "b8911a280ff429e37b589665f472265945ebd8f9223c95de242aaacc3313e776",
+    "bootstrap_seed": 42,
+    "tag": "phase4_eval"
+  },
+  "ipc_microbenchmark": {
+    "payload_bytes": 315,
+    "n_msgs": 1000,
+    "reps": 3,
+    "transports": {
+      "conventional_socket": {
+        "publish_us_mean": 7.45,
+        "consume_us_mean": 8.92,
+        "total_ms_mean": 9.117,
+        "throughput_mb_s": 32.95
+      },
+      "vectlink_ring": {
+        "publish_us_mean": 4.67,
+        "consume_us_mean": 5.42,
+        "total_ms_mean": 10.268,
+        "throughput_mb_s": 29.26
+      }
+    }
+  },
+  "methods": {
+    "full_history_socket": {
+      "n_scenarios": 50,
+      "n_rows": 150,
+      "wire_bytes": {
+        "mean": 790.96,
+        "ci95": [
+          787.92,
+          794.08
+        ]
+      },
+      "ipc_ms": {
+        "mean": 0.088,
+        "ci95": [
+          0.0841,
+          0.0932
+        ],
+        "p50": 0.0813,
+        "p95": 0.1174,
+        "std": 0.0264
+      },
+      "input_tokens": {
+        "mean": 275.4,
+        "ci95": [
+          274.0,
+          276.86
+        ]
+      },
+      "output_tokens": {
+        "mean": 63.7,
+        "ci95": [
+          63.34,
+          63.96
+        ]
+      },
+      "prefill_ms": {
+        "mean": 998.5156,
+        "ci95": [
+          992.5599,
+          1004.4653
+        ],
+        "p50": 997.168,
+        "p95": 1052.3207,
+        "std": 29.5225
+      },
+      "decode_ms": {
+        "mean": 2605.1757,
+        "ci95": [
+          2583.9743,
+          2629.4256
+        ],
+        "p50": 2580.3875,
+        "p95": 2798.5085,
+        "std": 159.192
+      },
+      "e2e_accum_ms": {
+        "mean": 3604.1995,
+        "ci95": [
+          3580.8246,
+          3631.0697
+        ],
+        "p50": 3574.485,
+        "p95": 3832.297,
+        "std": 171.4306
+      },
+      "rss_mib": {
+        "mean": 1400.0215,
+        "ci95": [
+          1387.7917,
+          1410.7102
+        ]
+      },
+      "exact_match": {
+        "mean": 0.54,
+        "ci95": [
+          0.4,
+          0.68
+        ]
+      },
+      "f1": {
+        "mean": 0.2621,
+        "ci95": [
+          0.243,
+          0.2795
+        ]
+      },
+      "entity_recall": {
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "relation_recovery": {
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "constraint_satisfaction": {
+        "mean": 0.88,
+        "ci95": [
+          0.78,
+          0.96
+        ]
+      },
+      "temporal_consistency": {
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "contradiction_resolution": {
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "task_completion_rate": {
+        "mean": 0.86,
+        "ci95": [
+          0.76,
+          0.94
+        ]
+      },
+      "obsolete_info_rate": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "cmcp_inc_socket": {
+      "n_scenarios": 50,
+      "n_rows": 150,
+      "wire_bytes": {
+        "mean": 352.4,
+        "ci95": [
+          351.36,
+          353.36
+        ]
+      },
+      "ipc_ms": {
+        "mean": 0.3124,
+        "ci95": [
+          0.3069,
+          0.3185
+        ],
+        "p50": 0.3014,
+        "p95": 0.3848,
+        "std": 0.0384
+      },
+      "input_tokens": {
+        "mean": 184.82,
+        "ci95": [
+          183.9,
+          185.86
+        ]
+      },
+      "output_tokens": {
+        "mean": 64.0,
+        "ci95": [
+          64.0,
+          64.0
+        ]
+      },
+      "prefill_ms": {
+        "mean": 666.5141,
+        "ci95": [
+          661.4458,
+          672.2374
+        ],
+        "p50": 660.628,
+        "p95": 708.0937,
+        "std": 27.0074
+      },
+      "decode_ms": {
+        "mean": 2578.0357,
+        "ci95": [
+          2565.4097,
+          2591.9146
+        ],
+        "p50": 2556.807,
+        "p95": 2778.112,
+        "std": 89.0722
+      },
+      "e2e_accum_ms": {
+        "mean": 3245.2348,
+        "ci95": [
+          3230.5356,
+          3261.3146
+        ],
+        "p50": 3214.705,
+        "p95": 3473.0271,
+        "std": 101.6369
+      },
+      "rss_mib": {
+        "mean": 1398.1206,
+        "ci95": [
+          1385.9172,
+          1410.3671
+        ]
+      },
+      "exact_match": {
+        "mean": 0.22,
+        "ci95": [
+          0.12,
+          0.34
+        ]
+      },
+      "f1": {
+        "mean": 0.1569,
+        "ci95": [
+          0.129,
+          0.1857
+        ]
+      },
+      "entity_recall": {
+        "mean": 0.6333,
+        "ci95": [
+          0.5533,
+          0.72
+        ]
+      },
+      "relation_recovery": {
+        "mean": 0.4,
+        "ci95": [
+          0.28,
+          0.54
+        ]
+      },
+      "constraint_satisfaction": {
+        "mean": 0.48,
+        "ci95": [
+          0.34,
+          0.62
+        ]
+      },
+      "temporal_consistency": {
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "contradiction_resolution": {
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "task_completion_rate": {
+        "mean": 0.28,
+        "ci95": [
+          0.16,
+          0.4005
+        ]
+      },
+      "obsolete_info_rate": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "cmcp_inc_vectlink": {
+      "n_scenarios": 50,
+      "n_rows": 150,
+      "wire_bytes": {
+        "mean": 352.4,
+        "ci95": [
+          351.36,
+          353.36
+        ]
+      },
+      "ipc_ms": {
+        "mean": 0.2567,
+        "ci95": [
+          0.2534,
+          0.2603
+        ],
+        "p50": 0.2501,
+        "p95": 0.3054,
+        "std": 0.0228
+      },
+      "input_tokens": {
+        "mean": 184.82,
+        "ci95": [
+          183.9,
+          185.86
+        ]
+      },
+      "output_tokens": {
+        "mean": 64.0,
+        "ci95": [
+          64.0,
+          64.0
+        ]
+      },
+      "prefill_ms": {
+        "mean": 664.2001,
+        "ci95": [
+          659.9621,
+          669.0506
+        ],
+        "p50": 658.1895,
+        "p95": 708.5294,
+        "std": 22.3576
+      },
+      "decode_ms": {
+        "mean": 2578.3391,
+        "ci95": [
+          2565.7665,
+          2594.05
+        ],
+        "p50": 2560.7895,
+        "p95": 2730.0498,
+        "std": 92.4146
+      },
+      "e2e_accum_ms": {
+        "mean": 3243.171,
+        "ci95": [
+          3229.2332,
+          3260.1611
+        ],
+        "p50": 3216.667,
+        "p95": 3425.8291,
+        "std": 102.541
+      },
+      "rss_mib": {
+        "mean": 1398.2719,
+        "ci95": [
+          1386.0346,
+          1410.5065
+        ]
+      },
+      "exact_match": {
+        "mean": 0.22,
+        "ci95": [
+          0.12,
+          0.34
+        ]
+      },
+      "f1": {
+        "mean": 0.1569,
+        "ci95": [
+          0.129,
+          0.1857
+        ]
+      },
+      "entity_recall": {
+        "mean": 0.6333,
+        "ci95": [
+          0.5533,
+          0.72
+        ]
+      },
+      "relation_recovery": {
+        "mean": 0.4,
+        "ci95": [
+          0.28,
+          0.54
+        ]
+      },
+      "constraint_satisfaction": {
+        "mean": 0.48,
+        "ci95": [
+          0.34,
+          0.62
+        ]
+      },
+      "temporal_consistency": {
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "contradiction_resolution": {
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "task_completion_rate": {
+        "mean": 0.28,
+        "ci95": [
+          0.16,
+          0.4005
+        ]
+      },
+      "obsolete_info_rate": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "paired_vs_full_history": {
+    "cmcp_inc_socket": {
+      "ipc_ms": {
+        "mean_diff": 0.2245,
+        "ci95": [
+          0.2181,
+          0.2311
+        ]
+      },
+      "input_tokens": {
+        "mean_diff": -90.58,
+        "ci95": [
+          -91.48,
+          -89.74
+        ]
+      },
+      "prefill_ms": {
+        "mean_diff": -332.0016,
+        "ci95": [
+          -337.4307,
+          -325.6527
+        ]
+      },
+      "e2e_accum_ms": {
+        "mean_diff": -358.9647,
+        "ci95": [
+          -376.9051,
+          -341.8618
+        ]
+      },
+      "exact_match": {
+        "mean_diff": -0.32,
+        "ci95": [
+          -0.46,
+          -0.18
+        ]
+      },
+      "relation_recovery": {
+        "mean_diff": -0.6,
+        "ci95": [
+          -0.72,
+          -0.46
+        ]
+      },
+      "constraint_satisfaction": {
+        "mean_diff": -0.4,
+        "ci95": [
+          -0.56,
+          -0.24
+        ]
+      }
+    },
+    "cmcp_inc_vectlink": {
+      "ipc_ms": {
+        "mean_diff": 0.1688,
+        "ci95": [
+          0.1626,
+          0.1741
+        ]
+      },
+      "input_tokens": {
+        "mean_diff": -90.58,
+        "ci95": [
+          -91.48,
+          -89.74
+        ]
+      },
+      "prefill_ms": {
+        "mean_diff": -334.3155,
+        "ci95": [
+          -339.1841,
+          -329.5374
+        ]
+      },
+      "e2e_accum_ms": {
+        "mean_diff": -361.0285,
+        "ci95": [
+          -379.2895,
+          -343.1352
+        ]
+      },
+      "exact_match": {
+        "mean_diff": -0.32,
+        "ci95": [
+          -0.46,
+          -0.18
+        ]
+      },
+      "relation_recovery": {
+        "mean_diff": -0.6,
+        "ci95": [
+          -0.72,
+          -0.46
+        ]
+      },
+      "constraint_satisfaction": {
+        "mean_diff": -0.4,
+        "ci95": [
+          -0.56,
+          -0.24
+        ]
+      }
+    }
+  }
+}

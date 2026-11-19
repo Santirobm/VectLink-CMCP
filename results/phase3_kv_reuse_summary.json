@@ -1,0 +1,53 @@
+{
+  "model": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+  "cross_arch_rejection": {
+    "rejected": true,
+    "stderr": "KV restore/identity check failed"
+  },
+  "conditions": {
+    "A_cold_full_history": {
+      "init_ms": 208.738,
+      "restore_ms": 0.0,
+      "prefill_ms": 422.483,
+      "ttft_ms": 634.078,
+      "decode_ms": 721.625,
+      "e2e_ms": 1355.149,
+      "rss_mib": 471.78,
+      "kv_bytes": 0.0,
+      "output_sample": " Node-100 is active, connects via Relay-200, and has a budget of 40ms. The active path is Relay-"
+    },
+    "B_vectlink_kv_full": {
+      "init_ms": 172.443,
+      "restore_ms": 0.831,
+      "prefill_ms": 152.298,
+      "ttft_ms": 326.301,
+      "decode_ms": 681.57,
+      "e2e_ms": 1007.561,
+      "rss_mib": 465.883,
+      "kv_bytes": 1169108.0,
+      "output_sample": " Node-100 is active, connects via Relay-200, and has a budget of 40ms. The active path is Relay-"
+    },
+    "C_cmcp_prefill": {
+      "init_ms": 183.346,
+      "restore_ms": 0.0,
+      "prefill_ms": 398.061,
+      "ttft_ms": 582.661,
+      "decode_ms": 719.182,
+      "e2e_ms": 1301.465,
+      "rss_mib": 472.417,
+      "kv_bytes": 0.0,
+      "output_sample": " The active path is Node-100 -> Relay-200 -> Sink-300, active route is R-200, and"
+    },
+    "D_cmcp_kv_reuse": {
+      "init_ms": 176.495,
+      "restore_ms": 0.853,
+      "prefill_ms": 122.468,
+      "ttft_ms": 300.598,
+      "decode_ms": 753.082,
+      "e2e_ms": 1053.314,
+      "rss_mib": 466.117,
+      "kv_bytes": 1292108.0,
+      "output_sample": " The active path is R-200, active route is Node-100:primary, and active budget is 40ms. The constrai"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+rep,condition,role,init_ms,restore_ms,prefill_ms,ttft_ms,decode_ms,e2e_ms,rss_mib,kv_bytes,n_prefix_tokens,n_query_tokens,output_text
+1,A_cold_full_history,cold,166.019,0.0,401.414,573.789,637.504,1210.304,471.82,0,124,0," Node-100 is active, connects via Relay-200, and has a budget of 40ms. The active path is Relay-"
+1,B_vectlink_kv_full,consumer,166.526,0.784,135.725,303.72,659.528,962.988,465.86,1169108,95,30," Node-100 is active, connects via Relay-200, and has a budget of 40ms. The active path is Relay-"
+1,C_cmcp_prefill,cold,169.863,0.0,396.229,566.966,749.737,1316.332,472.32,0,134,0," The active path is Node-100 -> Relay-200 -> Sink-300, active route is R-200, and"
+1,D_cmcp_kv_reuse,consumer,182.051,0.834,133.675,317.352,889.076,1206.068,466.05,1292108,105,30," The active path is R-200, active route is Node-100:primary, and active budget is 40ms. The constraints"
+2,A_cold_full_history,cold,219.454,0.0,423.036,643.362,796.941,1440.01,471.75,0,124,0," Node-100 is active, connects via Relay-200, and has a budget of 40ms. The active path is Relay-"
+2,B_vectlink_kv_full,consumer,182.662,0.924,194.867,379.255,762.1,1141.041,465.94,1169108,95,30," Node-100 is active, connects via Relay-200, and has a budget of 40ms. The active path is Relay-"
+2,C_cmcp_prefill,cold,206.007,0.0,399.652,607.498,746.472,1353.634,472.39,0,134,0," The active path is Node-100 -> Relay-200 -> Sink-300, active route is R-200, and"
+2,D_cmcp_kv_reuse,consumer,182.903,0.894,115.375,300.011,745.972,1045.586,466.03,1292108,105,30," The active path is R-200, active route is Node-100:primary, and active budget is 40ms. The constraints"
+3,A_cold_full_history,cold,240.74,0.0,442.999,685.083,730.43,1415.134,471.77,0,124,0," Node-100 is active, connects via Relay-200, and has a budget of 40ms. The active path is Relay-"
+3,B_vectlink_kv_full,consumer,168.141,0.785,126.301,295.927,623.081,918.655,465.85,1169108,95,30," Node-100 is active, connects via Relay-200, and has a budget of 40ms. The active path is Relay-"
+3,C_cmcp_prefill,cold,174.167,0.0,398.302,573.519,661.338,1234.43,472.54,0,134,0," The active path is Node-100 -> Relay-200 -> Sink-300, active route is R-200, and"
+3,D_cmcp_kv_reuse,consumer,164.531,0.831,118.355,284.43,624.199,908.289,466.27,1292108,105,30," The active path is R-200, active route is Node-100:primary, and active budget is 40ms. The constraints"
